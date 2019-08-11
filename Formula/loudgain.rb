@@ -8,6 +8,12 @@ class Loudgain < Formula
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "ffmpeg"
+  # libtag (=taglib) should be built from HEAD or at least
+  # commit 79bc9ccf8ea5606da2a86e1bfb5439e73a146272
+  # because it hasn't seen a new version since 2016.
+  # Before, it had a nasty bug that could clobber .ogg files!
+  # Use: brew install --HEAD libtag
+  # You might need 'brew unlink libtag' before.
   depends_on "libtag"
   depends_on "libebur128"
 
@@ -22,13 +28,15 @@ class Loudgain < Formula
   test do
     # `test do` will create, run in and delete a temporary directory.
     #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test loudgain`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
+    # For Homebrew/homebrew-core this will need to be a test that verifies
+    # the functionality of the software. Run the test with `brew test loudgain`.
+    # Options passed to `brew install` such as `--HEAD` also need to be
+    # provided to `brew test`.
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    #assert_match /^loudgain\s+#{version}.*/,
+    assert_match /^loudgain\s+0\.5\.3.*/,
+      shell_output("#{bin}/loudgain -v").strip
   end
 end
