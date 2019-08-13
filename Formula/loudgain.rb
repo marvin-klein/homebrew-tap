@@ -2,7 +2,7 @@ class Loudgain < Formula
   desc "ReplayGain 2.0 loudness normalizer based on the EBU R128/ITU BS.1770 standard"
   homepage "https://github.com/Moonbase59/loudgain"
   url "https://github.com/Moonbase59/loudgain/archive/v0.5.4.tar.gz"
-  sha256 "2b3258cd48820e2eb579e2357831d40520cb4104bda008d8dfd8188cf2b34db3"
+  sha256 "2911732bfad51bbcc072092c974c77cf0e8af2a47fa4d941e40db419b09bacf7"
   head "https://github.com/Moonbase59/loudgain.git"
 
   depends_on "cmake" => :build
