@@ -1,8 +1,8 @@
 class Loudgain < Formula
   desc "ReplayGain 2.0 loudness normalizer based on the EBU R128/ITU BS.1770 standard"
   homepage "https://github.com/Moonbase59/loudgain"
-  url "https://github.com/Moonbase59/loudgain/archive/v0.6.1.tar.gz"
-  sha256 "ea38a392a14a839551b9c8b53c88fcea316bad4ac2c4e346ae0758c2630e5ff5"
+  url "https://github.com/Moonbase59/loudgain/archive/v0.6.2.tar.gz"
+  sha256 "5f982a2c1508b5fe07f1993177126069bc5e76abc0aa2f412409f7774b5b6544"
   head "https://github.com/Moonbase59/loudgain.git"
 
   depends_on "cmake" => :build
@@ -37,7 +37,7 @@ class Loudgain < Formula
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
     #assert_match /^loudgain\s+#{version}.*/,
-    assert_match /^loudgain\s+0\.6\.1.*/,
+    assert_match /^loudgain\s+0\.6\.2.*/,
       shell_output("#{bin}/loudgain -v").strip
   end
 end
