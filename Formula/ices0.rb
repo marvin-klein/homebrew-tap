@@ -22,8 +22,8 @@ class Ices0 < Formula
   depends_on "libxml2"
   
   # scripting
-  depends_on "python2" => :recommended
-  depends_on "perl" => :recommended
+  depends_on "python2" => :optional
+  depends_on "perl" => :optional
 
   def install
     system "aclocal"
