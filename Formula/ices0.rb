@@ -11,18 +11,18 @@ class Ices0 < Formula
   depends_on "libtool" => :build
   
   # input/output
-  depends on "libshout"
-  depends on "lame"
-  depends on "libogg"
-  depends on "libvorbis"
-  depends on "flac"
-  depends on "faad2"
-  depends on "mp4v2"
-  depends on "libxml2"
+  depends_on "libshout"
+  depends_on "lame"
+  depends_on "libogg"
+  depends_on "libvorbis"
+  depends_on "flac"
+  depends_on "faad2"
+  depends_on "mp4v2"
+  depends_on "libxml2"
   
   # scripting
-  depends on "python2" => :recommended
-  depends on "perl" => :recommended
+  depends_on "python2" => :recommended
+  depends_on "perl" => :recommended
 
   def install
     system "aclocal"
