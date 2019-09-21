@@ -29,7 +29,7 @@ class Ices0 < Formula
     system "aclocal"
     system "autoreconf", "-fi"
     system "automake", "--add-missing"
-    system "./configure"
+    system "./configure", "--prefix=#{prefix}"
     system "make"
     system "make", "install"
   end
