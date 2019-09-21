@@ -1,8 +1,8 @@
 class Ices0 < Formula
   desc "Enhanced source client for broadcasting to an Icecast/Shoutcast server in MP3 format"
   homepage "https://github.com/Moonbase59/ices0"
-  url "https://github.com/Moonbase59/ices0/archive/v0.4.10.tar.gz"
-  sha256 "cffc837bbace63778d31971336cd99e80d50f0bb6c72269f1c9ee65778a161b0"
+  url "https://github.com/Moonbase59/ices0/archive/v0.4.11.tar.gz"
+  sha256 "9179496149e763a75fea37bf6ec12947cad4bdb868b401d34728b353b836047a"
   head "https://github.com/Moonbase59/ices0.git"
 
   # building
@@ -45,7 +45,7 @@ class Ices0 < Formula
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
     #assert_match /^loudgain\s+#{version}.*/,
-    assert_match /^ices\s+0\.4\.10.*/,
+    assert_match /^ices\s+0\.4\.11.*/,
       shell_output("#{bin}/ices -V").strip
   end
 end
