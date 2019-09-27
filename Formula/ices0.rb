@@ -13,13 +13,13 @@ class Ices0 < Formula
 
   # input/output
   depends_on "lame"
-  depends_on "libogg"
   depends_on "flac"
   depends_on "faad2"
+  depends_on "libogg"
   depends_on "libvorbis"
+  depends_on "libshout"
   depends_on "libxml2"
   depends_on "mp4v2"
-  depends_on "libshout"
 
   # scripting
   depends_on "perl" => :optional
