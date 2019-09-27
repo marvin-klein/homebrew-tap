@@ -1,5 +1,5 @@
 class Ices0 < Formula
-  desc "Enhanced source client for broadcasting to an Icecast/Shoutcast server in MP3 format"
+  desc "Source client for broadcasting to Icecast/Shoutcast servers in MP3 format"
   homepage "https://github.com/Moonbase59/ices0"
   url "https://github.com/Moonbase59/ices0/archive/v0.4.11.tar.gz"
   sha256 "9179496149e763a75fea37bf6ec12947cad4bdb868b401d34728b353b836047a"
@@ -10,20 +10,20 @@ class Ices0 < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  
+
   # input/output
-  depends_on "libshout"
   depends_on "lame"
   depends_on "libogg"
-  depends_on "libvorbis"
+  depends_on "libshout"
   depends_on "flac"
   depends_on "faad2"
-  depends_on "mp4v2"
+  depends_on "libvorbis"
   depends_on "libxml2"
-  
+  depends_on "mp4v2"
+
   # scripting
-  depends_on "python2" => :optional
   depends_on "perl" => :optional
+  depends_on "python@2" => :optional
 
   def install
     system "aclocal"
@@ -44,7 +44,7 @@ class Ices0 < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    #assert_match /^loudgain\s+#{version}.*/,
+    # assert_match /^loudgain\s+#{version}.*/,
     assert_match /^ices\s+0\.4\.11.*/,
       shell_output("#{bin}/ices -V").strip
   end
