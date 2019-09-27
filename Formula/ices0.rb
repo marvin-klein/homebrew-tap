@@ -12,16 +12,16 @@ class Ices0 < Formula
   depends_on "pkg-config" => :build
 
   # input/output
-  depends_on "lame"
-  depends_on "flac"
   depends_on "faad2"
+  depends_on "flac"
+  depends_on "lame"
   depends_on "libogg"
-  depends_on "libvorbis"
   depends_on "libshout"
+  depends_on "libvorbis"
   depends_on "libxml2"
   depends_on "mp4v2"
 
-  # scripting
+  # scripting (left out in homebrew-core)
   depends_on "perl" => :optional
   depends_on "python@2" => :optional
 
