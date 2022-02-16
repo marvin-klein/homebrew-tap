@@ -7,7 +7,7 @@ class Loudgain < Formula
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "ffmpeg"
+  depends_on "ffmpeg@4"
   # libebur128 should be version 1.2.4 or newer.
   depends_on "libebur128"
   # taglib (=libtag) should be built from HEAD
